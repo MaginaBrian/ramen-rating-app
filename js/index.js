@@ -22,7 +22,7 @@ const displayRamens = () => {
 
 const handleClick = (ramen) =>{
     const detail = document.getElementById('ramen-detail');
-    detail.querySelector('.detail-image').src = ramen.image;
+    detail.querySelector('.image').src = ramen.image;
     detail.querySelector('.name').textContent = ramen.name;
     detail.querySelector('.restaurant').textContent = ramen.restaurant;
     detail.querySelector('.rating').textContent = ramen.rating ? `Rating: ${ramen.rating}/5` : '';
@@ -31,8 +31,8 @@ const handleClick = (ramen) =>{
 
 const addSubmitListener =() => {
     const form = document.getElementById('new-ramen');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
         
         const newRamen = {
             id: ramens.length + 1,
