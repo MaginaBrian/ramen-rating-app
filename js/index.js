@@ -8,15 +8,15 @@ const ramens = [
 ];
 
 const displayRamens = () => {
-    const ramenMenu = document.getElementById('ramen-menu');
-    ramenMenu.innerHTML = ''; 
+    const menu = document.getElementById('ramen-menu');
+    menu.innerHTML = ''; 
     
     ramens.forEach((ramen) => {
         const img = document.createElement('img');
         img.src = ramen.image;
         img.alt = ramen.name;
         img.addEventListener('click', () => handleClick(ramen));
-        ramenMenu.appendChild(img);
+        menu.appendChild(img);
     });
 }
 
