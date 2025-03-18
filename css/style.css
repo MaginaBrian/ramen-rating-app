@@ -8,18 +8,7 @@
 	--tertiary-color: #e31c25;
     
 }
-.body {
-	background-image: url(../images/japan.png);
-	min-height: 100vh;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 16px;
-	display: flex;
-	flex-direction: column;
-    font-family: var(--body-font);
-    color: var(--primary-white);
-}
+
 
 .container {
 

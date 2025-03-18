@@ -7,6 +7,21 @@ const ramens = [
     { id: 5, name: "Kaisen Ramen", restaurant: "Ichiran", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcgyhD3LmuBWxwVUPVcDIe6hLrinKIODoknA&s",rating: 5}
 ];
 
+const setBackgroundWithStyle =() =>{
+    document.body.style.backgroundImage = "url('../images/japan.png')";
+    document.body.style.minHeight = "100vh";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.padding = "16px";
+    document.body.style.display = "flex";
+    document.body.style.flexDirection = "column";
+    document.body.style.fontFamily = "var(--body-font)";
+    document.body.style.color = "var(--primary-white)";
+    
+
+}
+
 const displayRamens = () => {
     const menu = document.getElementById('ramen-menu');
     menu.innerHTML = ''; 
@@ -54,7 +69,7 @@ const addSubmitListener =() => {
 function main() {
     displayRamens();
     addSubmitListener();
-   
+   setBackgroundWithStyle();
     if (ramens.length > 0) {
         handleClick(ramens[0]);
     }
